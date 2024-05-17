@@ -1,13 +1,11 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
 public class DynamicPersonsList {
-    static List<Person> personList = listOfPersons();
-
     static Random random = new Random();
     static List<String> list = List.of("Anton", "Michael","Lena","Oleg","Dmitry","Olga");
+    static List<Person> personList = listOfPersons();
 
     public static String getRandomName(){
         int x = random.nextInt(list.size());
