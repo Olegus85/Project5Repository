@@ -5,8 +5,9 @@ import java.util.Random;
 
 public class DynamicPersonsList {
     static List<Person> personList = listOfPersons();
+    static List<String> list = new ArrayList<>(Arrays.asList("Anton", "Michael","Lena","Oleg","Dmitry","Olga"));
+
     public static String getRandomName(){
-        List<String> list = new ArrayList<>(Arrays.asList("Anton", "Michael","Lena","Oleg","Dmitry","Olga"));
         Random random = new Random();
         int x = random.nextInt(list.size());
         return list.get(x);
