@@ -4,12 +4,12 @@ import java.util.Random;
 
 public class DynamicPersonsList {
     static Random random = new Random();
-    static List<String> list = List.of("Anton", "Michael","Lena","Oleg","Dmitry","Olga");
+    static List<String> names = List.of("Anton", "Michael","Lena","Oleg","Dmitry","Olga");
     static List<Person> personList = listOfPersons();
 
     public static String getRandomName(){
-        int x = random.nextInt(list.size());
-        return list.get(x);
+        int x = random.nextInt(names.size());
+        return names.get(x);
     }
     public static int getRandomAge(){
         int randomAge = random.nextInt(4,66);
