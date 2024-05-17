@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class DynamicPersonsList {
     static List<Person> personList = listOfPersons();
-    static List<String> list = new ArrayList<>(Arrays.asList("Anton", "Michael","Lena","Oleg","Dmitry","Olga"));
+    static List<String> list = List.of("Anton", "Michael","Lena","Oleg","Dmitry","Olga");
 
     public static String getRandomName(){
         Random random = new Random();
