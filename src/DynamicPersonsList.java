@@ -8,12 +8,10 @@ public class DynamicPersonsList {
     static List<Person> personList = listOfPersons();
 
     public static String getRandomName(){
-        int x = random.nextInt(names.size());
-        return names.get(x);
+        return names.get(random.nextInt(names.size()));
     }
     public static int getRandomAge(){
-        int randomAge = random.nextInt(4,66);
-        return randomAge;
+        return random.nextInt(4,66);
     }
     public static List<Person> listOfPersons(){
         int numberOfPersons = random.nextInt(10,20);
