@@ -5,20 +5,19 @@ import java.util.Random;
 
 public class DynamicPersonsList {
     static List<Person> personList = listOfPersons();
+
+    static Random random = new Random();
     static List<String> list = List.of("Anton", "Michael","Lena","Oleg","Dmitry","Olga");
 
     public static String getRandomName(){
-        Random random = new Random();
         int x = random.nextInt(list.size());
         return list.get(x);
     }
     public static int getRandomAge(){
-        Random random = new Random();
         int randomAge = random.nextInt(4,66);
         return randomAge;
     }
     public static List<Person> listOfPersons(){
-        Random random = new Random();
         int numberOfPersons = random.nextInt(10,20);
         List<Person> personList = new ArrayList<>();
         for (int i=0;i<numberOfPersons;i++){
