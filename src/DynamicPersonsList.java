@@ -3,21 +3,19 @@ import java.util.List;
 import java.util.Random;
 
 public class DynamicPersonsList {
+    static Random random = new Random();
+    static List<String> names = List.of("Anton", "Michael","Lena","Oleg","Dmitry","Olga");
     static List<Person> personList = listOfPersons();
-    static List<String> name = List.of("Anton", "Michael","Lena","Oleg","Dmitry","Olga");
 
     public static String getRandomName(){
-        Random random = new Random();
-        int x = random.nextInt(name.size());
-        return name.get(x);
+        int x = random.nextInt(names.size());
+        return names.get(x);
     }
     public static int getRandomAge(){
-        Random random = new Random();
         int randomAge = random.nextInt(4,66);
         return randomAge;
     }
     public static List<Person> listOfPersons(){
-        Random random = new Random();
         int numberOfPersons = random.nextInt(10,20);
         List<Person> personList = new ArrayList<>();
         for (int i=0;i<numberOfPersons;i++){
