@@ -10,7 +10,7 @@ public class DynamicPersonsList {
         int numberOfPersons = random.nextInt(10, 20);
         List<Person> personList = new ArrayList<>();
         for (int i = 0; i < numberOfPersons; i++) {
-            personList.add(new Person(new NameGenerator().generate(), new AgeGenerator().generate()));
+            personList.add(new Person());
         }
         return personList;
     }
@@ -41,6 +41,11 @@ public class DynamicPersonsList {
 class Person {
     private String name;
     private int age;
+
+    Person() {
+        name=new NameGenerator().generate();
+        age=new AgeGenerator().generate();
+    }
 
     Person(String name,int age) {
         this.name = name;
