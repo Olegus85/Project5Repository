@@ -9,8 +9,11 @@ public class DynamicPersonsList {
     public static List<Person> listOfPersons() {
         int numberOfPersons = random.nextInt(10, 20);
         List<Person> personList = new ArrayList<>();
+        NameGenerator nameGenerator = new NameGenerator();
+        AgeGenerator ageGenerator = new AgeGenerator();
+
         for (int i = 0; i < numberOfPersons; i++) {
-            personList.add(new Person());
+            personList.add(new Person(nameGenerator.generate(), ageGenerator.generate()));
         }
         return personList;
     }
@@ -41,13 +44,8 @@ public class DynamicPersonsList {
 class Person {
     private String name;
     private int age;
-    private static NameGenerator nameGenerator = new NameGenerator();
-    private static AgeGenerator ageGenerator = new AgeGenerator();
 
-    Person() {
-        name=nameGenerator.generate();
-        age=ageGenerator.generate();
-    }
+    Person() {}
 
     Person(String name,int age) {
         this.name = name;
