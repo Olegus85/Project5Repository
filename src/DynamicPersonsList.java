@@ -13,8 +13,8 @@ public class DynamicPersonsList {
 
     public static int getRandomAge() {
         return random.nextInt(4,66);
-
     }
+
     public static List<Person> listOfPersons() {
         int numberOfPersons = random.nextInt(10, 20);
         List<Person> personList = new ArrayList<>();
