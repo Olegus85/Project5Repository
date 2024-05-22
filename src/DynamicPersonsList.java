@@ -9,11 +9,10 @@ public class DynamicPersonsList {
     public static List<Person> listOfPersons() {
         int numberOfPersons = random.nextInt(10, 20);
         List<Person> personList = new ArrayList<>();
-        NameGenerator nameGenerator = new NameGenerator();
-        AgeGenerator ageGenerator = new AgeGenerator();
+        PersonGenerator personGenerator = new PersonGenerator();
 
         for (int i = 0; i < numberOfPersons; i++) {
-            personList.add(new Person(nameGenerator.generate(), ageGenerator.generate()));
+            personList.add(personGenerator.generate());
         }
         return personList;
     }
