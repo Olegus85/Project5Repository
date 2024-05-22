@@ -41,10 +41,12 @@ public class DynamicPersonsList {
 class Person {
     private String name;
     private int age;
+    private static NameGenerator nameGenerator = new NameGenerator();
+    private static AgeGenerator ageGenerator = new AgeGenerator();
 
     Person() {
-        name=new NameGenerator().generate();
-        age=new AgeGenerator().generate();
+        name=nameGenerator.generate();
+        age=ageGenerator.generate();
     }
 
     Person(String name,int age) {
