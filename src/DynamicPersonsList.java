@@ -4,22 +4,13 @@ import java.util.Random;
 
 public class DynamicPersonsList {
     static Random random = new Random();
-    static List<String> names = List.of("Anton", "Michael", "Lena", "Oleg", "Dmitry", "Olga");
     static List<Person> personList = listOfPersons();
-
-    public static String getRandomName() {
-        return names.get(random.nextInt(names.size()));
-    }
-
-    public static int getRandomAge() {
-        return random.nextInt(4,66);
-    }
 
     public static List<Person> listOfPersons() {
         int numberOfPersons = random.nextInt(10, 20);
         List<Person> personList = new ArrayList<>();
         for (int i = 0; i < numberOfPersons; i++) {
-            personList.add(new Person(getRandomName(), getRandomAge()));
+            personList.add(new Person(new NameGenerator().generate(), new AgeGenerator().generate()));
         }
         return personList;
     }
