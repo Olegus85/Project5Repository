@@ -45,7 +45,7 @@ public class DynamicPersonsList {
 
 @Setter
 @Getter
-class Person {
+class Person implements Comparable<Person>{
     private String name;
     private int age;
 
@@ -67,4 +67,13 @@ class Person {
         return name + " " + age;
     }
 
+        public int compareTo(Person person1, Person person2) {
+
+    return 0;
+    }
+
+    @Override
+    public int compareTo(Person person1) {
+        return this.age - person1.age;
+    }
 }

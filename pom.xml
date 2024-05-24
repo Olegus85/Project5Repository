@@ -13,7 +13,7 @@
 
     <name>My Maven Project</name>
     <url>https://projectlombok.org</url>
-    <description>Spice up your java: Automatic Resource Management, automatic generation of getters, setters, equals, hashCode and toString, and more!</description>
+    <description>Some kind of description</description>
 
     <dependencies>
         <dependency>
@@ -35,10 +35,12 @@
         <connection>scm:git:git://github.com/projectlombok/lombok.git</connection>
         <url>http://github.com/projectlombok/lombok</url>
     </scm>
+
     <issueManagement>
         <system>GitHub Issues</system>
         <url>https://github.com/projectlombok/lombok/issues</url>
     </issueManagement>
+
     <developers>
         <developer>
             <id>rzwitserloot</id>

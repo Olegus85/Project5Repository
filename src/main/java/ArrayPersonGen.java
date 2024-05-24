@@ -26,6 +26,6 @@ public class ArrayPersonGen {
                 }
             }
         }
-        System.out.println(Arrays.toString(personsArray));
+        System.out.println("Before age sorting: "+Arrays.toString(personsArray));
     }
 }
