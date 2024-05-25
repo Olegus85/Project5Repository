@@ -6,16 +6,15 @@ public class SortingByAge {
     static List<Person> personList = DynamicPersonsList.listOfPersons();
     static List<Person> personList2 = DynamicPersonsList.listOfPersons();
 
-
-    public static void sortingUsingCompareToInPersonClass (List <Person> list) {
+    public static void sortingUsingCompareToInPersonClass(List<Person> list) {
         Collections.sort(list);
-        System.out.println("After sorting via CompareToMethodInClass: "+list);
+        System.out.println("After sorting via CompareToMethodInClass: " + list);
     }
 
-    public static void sortingUsingComparatorClass (List <Person> list) {
+    public static void sortingUsingComparatorClass(List<Person> list) {
         ComparatorClass comparatorClass = new ComparatorClass();
-        Collections.sort (list, comparatorClass);
-        System.out.println("After sorting using ComparatorClass: "+list);
+        Collections.sort(list, comparatorClass);
+        System.out.println("After sorting using ComparatorClass: " + list);
     }
 
     public static void main(String[] args) {
@@ -26,9 +25,10 @@ public class SortingByAge {
         sortingUsingComparatorClass(personList2);                       //using ComparatorClass
     }
 }
+
 class ComparatorClass implements Comparator<Person> {
     @Override
-    public int compare (Person person1, Person person2) {
+    public int compare(Person person1, Person person2) {
         return person1.getAge() - person2.getAge();
     }
 }

@@ -8,14 +8,14 @@ public class ArrayPersonGen {
 
     public static void main(String[] args) {
         int randomNumber = random.nextInt(20);
+        Person tempPerson;
 
         if (randomNumber < 5) {
             personsArray = new Person[randomNumber];
             for (int i = 0; i < randomNumber; i++) {
                 personsArray[i] = personGenerator.generate();
             }
-        }
-        else {
+        } else {
             for (int i = 0; i < randomNumber; i++) {
                 try {
                     personsArray[i] = personGenerator.generate();
@@ -26,6 +26,19 @@ public class ArrayPersonGen {
                 }
             }
         }
-        System.out.println("Before age sorting: "+Arrays.toString(personsArray));
+        System.out.println("Before age sorting: " + Arrays.toString(personsArray));
+
+        for (int i = 0; i < personsArray.length; i++) {
+            for (int j = i + 1; j < personsArray.length; j++) {
+                if (personsArray[i].getAge() > personsArray[j].getAge()) {
+                    tempPerson = personsArray[i];
+                    personsArray[i] = personsArray[j];
+                    personsArray[j] = tempPerson;
+                }
+            }
+        }
+
+        System.out.println("After bubble sort : " + Arrays.toString(personsArray));
+
     }
 }
