@@ -26,14 +26,14 @@ public class ArrayPersonGen {
                 }
             }
         }
-        System.out.println("Before age sorting: " + Arrays.toString(personsArray));
+        System.out.println("Before bubble sorting: " + Arrays.toString(personsArray));
 
-        for (int i = 0; i < personsArray.length; i++) {
-            for (int j = i + 1; j < personsArray.length; j++) {
-                if (personsArray[i].getAge() > personsArray[j].getAge()) {
-                    tempPerson = personsArray[i];
-                    personsArray[i] = personsArray[j];
-                    personsArray[j] = tempPerson;
+        for (int i = 0; i < personsArray.length - 1; i++) {
+            for (int j = 0; j < (personsArray.length - 1) - i; j++) {
+                if (personsArray[j].getAge() > personsArray[j + 1].getAge()) {
+                    tempPerson = personsArray[j];
+                    personsArray[j] = personsArray[j + 1];
+                    personsArray[j + 1] = tempPerson;
                 }
             }
         }
