@@ -26,19 +26,28 @@ public class ArrayPersonGen {
                 }
             }
         }
-        System.out.println("Before bubble sorting: " + Arrays.toString(personsArray));
+        System.out.println("Before insert sorting: " + Arrays.toString(personsArray));
 
-        for (int i = 0; i < personsArray.length - 1; i++) {
-            for (int j = 0; j < (personsArray.length - 1) - i; j++) {
-                if (personsArray[j].getAge() > personsArray[j + 1].getAge()) {
-                    tempPerson = personsArray[j];
-                    personsArray[j] = personsArray[j + 1];
-                    personsArray[j + 1] = tempPerson;
-                }
+//        for (int i = 0; i < personsArray.length - 1; i++) {
+//            for (int j = 0; j < (personsArray.length - 1) - i; j++) {
+//                if (personsArray[j].getAge() > personsArray[j + 1].getAge()) {
+//                    tempPerson = personsArray[j];
+//                    personsArray[j] = personsArray[j + 1];
+//                    personsArray[j + 1] = tempPerson;
+//                }
+//            }
+//        }
+//
+//        System.out.println("After bubble sort : " + Arrays.toString(personsArray));
+
+        for (int i = 1; i < personsArray.length; i++) {
+            while (personsArray[i].getAge() < personsArray[i - 1].getAge()) {
+                tempPerson = personsArray[i - 1];
+                personsArray[i - 1] = personsArray[i];
+                personsArray[i] = tempPerson;
+                if (i >= 2) i--;                          //checking outOfBound
             }
         }
-
-        System.out.println("After bubble sort : " + Arrays.toString(personsArray));
-
+        System.out.println("After insert sorting : " + Arrays.toString(personsArray));
     }
 }
