@@ -5,7 +5,7 @@
 
 public interface SortAlgorithm<T> {
 
-    Generator<T> generate();
+    Generator<T> getGenerator();
 
     /**
      * @param unsorted array
