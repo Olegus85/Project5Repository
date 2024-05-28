@@ -12,8 +12,10 @@ public class SortingByAge {
     }
 
     public static void sortingUsingComparatorClass(List<Person> list) {
-        ComparatorClass comparatorClass = new ComparatorClass();
-        Collections.sort(list, comparatorClass);
+        Collections.sort(
+                list,
+                (person1, person2) -> person1.getAge() - person2.getAge()
+        );
         System.out.println("After sorting using ComparatorClass: " + list);
     }
 
@@ -23,12 +25,5 @@ public class SortingByAge {
         System.out.println();
         System.out.println("List 2 Before sorting: " + personList2);    //list2 before sorting
         sortingUsingComparatorClass(personList2);                       //using ComparatorClass
-    }
-}
-
-class ComparatorClass implements Comparator<Person> {
-    @Override
-    public int compare(Person person1, Person person2) {
-        return person1.getAge() - person2.getAge();
     }
 }
