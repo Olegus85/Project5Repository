@@ -7,7 +7,7 @@ public class ArrayPersonGen {
     static PersonGenerator personGenerator = new PersonGenerator();
 
     public static void main(String[] args) {
-        int randomNumber = random.nextInt(20);
+        int randomNumber = random.nextInt(5,20);
         Person tempPerson;
 
         if (randomNumber < 5) {
@@ -40,13 +40,19 @@ public class ArrayPersonGen {
 //
 //        System.out.println("After bubble sort : " + Arrays.toString(personsArray));
 
-        for (int i = 1; i < personsArray.length; i++) {
-            while (personsArray[i].getAge() < personsArray[i - 1].getAge()) {
-                tempPerson = personsArray[i - 1];
-                personsArray[i - 1] = personsArray[i];
-                personsArray[i] = tempPerson;
-                if (i >= 2) i--;                          //checking outOfBound
+        for(int i=1;i< personsArray.length;i++){
+            Person currentPerson = personsArray[i];
+            int index = i;
+            while (currentPerson.getAge()<personsArray[index-1].getAge()){
+                if(index-1==0&&currentPerson.getAge()<personsArray[index-1].getAge()){
+                    personsArray[index]=personsArray[index-1];
+                    index--;
+                    break;
+                }
+                personsArray[index]=personsArray[index-1];
+                index--;
             }
+            personsArray[index]=currentPerson;
         }
         System.out.println("After insert sorting : " + Arrays.toString(personsArray));
     }
