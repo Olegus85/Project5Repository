@@ -1,8 +1,12 @@
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.List;
 import java.util.Random;
 
-public class ArrayPersonGen {
-    public static void main(String[] args) {
+public class SortTest {
+    @Test
+    public void sortingTest() {
         List<SortAlgorithm<Person>> sortAlgorithms = List.of(new BubbleSort(), new InsertSort());
 
         sortAlgorithms.forEach(sortMethod -> {
@@ -15,6 +19,9 @@ public class ArrayPersonGen {
 
             Person[] sortedList = sortMethod.sort(personList.toArray(Person[]::new));
 
+            for (int i = 0; i < sortedList.length - 1; i++) {
+                Assert.assertTrue(sortedList[0].getAge() <= sortedList[i].getAge());
+            }
         });
     }
 }
