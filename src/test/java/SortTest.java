@@ -7,7 +7,7 @@ import java.util.Random;
 public class SortTest {
     @Test
     public void sortingTest() {
-        List<SortAlgorithm<Person>> sortAlgorithms = List.of(new BubbleSort(), new InsertSort());
+        List<SortAlgorithm<Person>> sortAlgorithms = List.of(new BubbleSort(), new InsertSort(), new SelectionSort());
 
         sortAlgorithms.forEach(sortMethod -> {
             Generator<Person> generator = sortMethod.getGenerator();
