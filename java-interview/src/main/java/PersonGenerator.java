@@ -1,3 +1,5 @@
+import org.olegus.types.Person;
+
 public class PersonGenerator implements Generator<Person>{
     private static NameGenerator nameGenerator = new NameGenerator();
     private static AgeGenerator ageGenerator = new AgeGenerator();

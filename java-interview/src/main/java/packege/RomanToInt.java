@@ -1,4 +1,4 @@
-package parralel.packege;
+package packege;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,5 +1,6 @@
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
+import org.olegus.types.Person;
 
 import java.util.List;
 import java.util.Random;
@@ -20,7 +21,7 @@ public class SortTest {
             Person[] sortedList = sortMethod.sort(personList.toArray(Person[]::new));
 
             for (int i = 0; i < sortedList.length - 1; i++) {
-                Assert.assertTrue(sortedList[0].getAge() <= sortedList[i].getAge());
+                Assertions.assertTrue(sortedList[0].getAge() <= sortedList[i].getAge());
             }
         });
     }

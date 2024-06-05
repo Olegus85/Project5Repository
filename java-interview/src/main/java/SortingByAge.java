@@ -1,5 +1,6 @@
+import org.olegus.types.Person;
+
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class SortingByAge {
@@ -21,7 +22,7 @@ public class SortingByAge {
 
     public static void main(String[] args) {
         System.out.println("List 1 Before sorting: " + personList);    //before sorting
-        sortingUsingCompareToInPersonClass(personList);                 //using CompareTo Override method in Person class
+        sortingUsingCompareToInPersonClass(personList);                 //using CompareTo Override method in org.olegus.types.Person class
         System.out.println();
         System.out.println("List 2 Before sorting: " + personList2);    //list2 before sorting
         sortingUsingComparatorClass(personList2);                       //using ComparatorClass

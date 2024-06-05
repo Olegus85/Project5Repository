@@ -1,3 +1,5 @@
+import org.olegus.types.Person;
+
 import java.util.Arrays;
 
 public class InsertSort implements SortAlgorithm<Person> {

@@ -1,3 +1,5 @@
+import org.olegus.types.Person;
+
 import java.util.Arrays;
 
 public class SelectionSort implements SortAlgorithm<Person> {
