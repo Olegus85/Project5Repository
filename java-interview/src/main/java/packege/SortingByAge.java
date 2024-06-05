@@ -1,3 +1,5 @@
+package packege;
+
 import org.olegus.types.Person;
 
 import java.util.Collections;
