@@ -14,6 +14,8 @@ public class PersonController {
     public List<Person> getGeneratedPersonList() {
         PersonGenerator personGenerator = new PersonGenerator();
         return Stream.iterate(personGenerator.generate(), person -> personGenerator.generate())
-                .limit(new Random().nextInt(10)).collect(Collectors.toList());
+                .limit(new Random()
+                        .nextInt(10))
+                .collect(Collectors.toList());
     }
 }

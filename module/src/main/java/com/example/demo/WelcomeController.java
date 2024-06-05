@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 @RestController
 public class WelcomeController {
 
-    PersonController personController;
+    private final PersonController personController;
 
     @Autowired
     public WelcomeController(PersonController personController) {
@@ -20,8 +20,8 @@ public class WelcomeController {
 
     @GetMapping("/person")
     public List<Person> sortByAge(Integer fromAge, Integer toAge) {
-         return personController.getGeneratedPersonList().stream()
-                 .filter(person -> person.getAge() > fromAge && person.getAge() <= toAge)
-                 .collect(Collectors.toList());
+        return personController.getGeneratedPersonList().stream()
+                .filter(person -> person.getAge() > fromAge && person.getAge() <= toAge)
+                .collect(Collectors.toList());
     }
 }
