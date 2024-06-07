@@ -1,4 +1,4 @@
-package packege;
+package org.olegus85.javainterview;
 
 import java.util.List;
 import java.util.Random;

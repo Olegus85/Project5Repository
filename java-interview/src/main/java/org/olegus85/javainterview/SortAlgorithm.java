@@ -1,4 +1,4 @@
-package packege;
+package org.olegus85.javainterview;
 
 /**
  * @author d_shilko

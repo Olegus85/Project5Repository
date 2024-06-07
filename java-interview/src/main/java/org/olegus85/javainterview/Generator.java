@@ -1,4 +1,4 @@
-package packege;
+package org.olegus85.javainterview;
 
 /**
  * Интерфейс для генерации чего-либо, например рандомного имени или рандомного числа

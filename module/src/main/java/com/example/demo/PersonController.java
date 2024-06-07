@@ -1,8 +1,8 @@
 package com.example.demo;
 
 import org.olegus.types.Person;
+import org.olegus85.javainterview.PersonGenerator;
 import org.springframework.stereotype.Service;
-import packege.PersonGenerator;
 
 import java.util.List;
 import java.util.Random;
