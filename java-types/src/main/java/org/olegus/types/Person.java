@@ -2,9 +2,13 @@ package org.olegus.types;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 @Setter
 @Getter
+@Component("personBean")
+@Scope("prototype")
 public class Person implements Comparable<Person> {
     private String name;
     private int age;

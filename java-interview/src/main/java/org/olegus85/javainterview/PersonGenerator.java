@@ -1,10 +1,15 @@
 package org.olegus85.javainterview;
 
 import org.olegus.types.Person;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component("personGeneratorBean")
 public class PersonGenerator implements Generator<Person>{
-    private static NameGenerator nameGenerator = new NameGenerator();
-    private static AgeGenerator ageGenerator = new AgeGenerator();
+    @Autowired
+    private NameGenerator nameGenerator;
+    @Autowired
+    private AgeGenerator ageGenerator;
 
     @Override
     public Person generate() {

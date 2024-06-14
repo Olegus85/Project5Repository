@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import lombok.AllArgsConstructor;
 import org.olegus.types.Person;
 import org.olegus85.javainterview.PersonGenerator;
 import org.springframework.stereotype.Service;
@@ -10,11 +11,14 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Service
+@AllArgsConstructor
 public class PersonController {
+    PersonGenerator personGenerator;
+    Random random;
+
     public List<Person> getGeneratedPersonList() {
-        PersonGenerator personGenerator = new PersonGenerator();
         return Stream.iterate(personGenerator.generate(), person -> personGenerator.generate())
-                .limit(new Random()
+                .limit(random
                         .nextInt(10))
                 .collect(Collectors.toList());
     }
