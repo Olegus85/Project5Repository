@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import java.util.Random;
 
 @SpringBootApplication
-@ComponentScan("org.olegus.types;org.olegus85.javainterview")
+@ComponentScan("org.olegus.types;org.olegus85.javainterview;com.example.demo")
 public class DemoApplication {
     @Bean
     public Random random() {

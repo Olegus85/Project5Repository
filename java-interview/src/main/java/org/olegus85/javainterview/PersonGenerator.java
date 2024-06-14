@@ -10,6 +10,8 @@ public class PersonGenerator implements Generator<Person>{
     private NameGenerator nameGenerator;
     @Autowired
     private AgeGenerator ageGenerator;
+    @Autowired
+    private Person person;
 
     @Override
     public Person generate() {
